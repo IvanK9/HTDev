@@ -1,0 +1,125 @@
+@use "../base/vars";
+
+.advantages__wrapper {
+  position: relative;
+  padding: 100px 60px 125px;
+  background-color: vars.$color-videoBg;
+
+  @include vars.mobile {
+    padding: 60px 20px;
+  }
+}
+
+.advantages__title {
+  font-size: 40px;
+  margin-bottom: 60px;
+  line-height: 60px;
+  color: vars.$color-bannerBg;
+}
+
+.advantages__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 31px;
+  // justify-content: center;
+
+  @include vars.mobile {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3 - 21px);
+  // max-width: 356px;
+  overflow: hidden;
+  min-height: 317px;
+  height: auto;
+
+  // @include vars.mobile {
+  //   width: calc(100% / 2);
+  // }
+}
+
+// .advantage__item-img {
+//   height: 178px;
+// }
+
+.advantages__content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 27px;
+  background-color: vars.$color-bannerBg;
+  height: 100%;
+}
+
+.advantages__item-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 22px;
+  color: vars.$color-white;
+}
+
+.advantages__item-btn {
+  margin-top: auto;
+  align-self: flex-end;
+  z-index: 10;
+  transition: transform .3s ease-in-out;
+}
+
+.advantages__item-btn--active {
+  transform: rotate(45deg);
+}
+
+.advantages__item-dscr {
+  position: absolute;
+  bottom: -100%;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  color: vars.$color-white;
+  background-color: vars.$color-bannerBg;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.advantages__item-dscr--active {
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+
+.advantages__btn {
+  visibility: hidden;
+  width: 10px;
+  height: 7px;
+  top: 60%;
+  margin-top: 0;
+
+  @include vars.mobile {
+    visibility: visible;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
+
+.advantages__pagination {
+  bottom: 30px;
+}

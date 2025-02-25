@@ -8,3 +8,33 @@ $color-bannerBg: #0A3B93;
 // Fonts
 $fonts-Lato: "Lato-Bold";
 $fonts-LatoRegular: "Lato-Regular";
+
+// Mixin
+// $width-L: 1340px;
+$width-M: 1339px;
+$width-S: 1019px;
+$width-XS: 699px;
+
+// @mixin desctop {
+//   @media (max-width: #{$width-M}) {
+//     @content;
+//   }
+// }
+
+@mixin laptop {
+  @media (max-width: #{$width-M}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$width-S}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$width-XS}) {
+    @content;
+  }
+}
