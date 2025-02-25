@@ -1,0 +1,21 @@
+@use "../base/vars";
+
+.header {
+  .container {
+    position: relative;
+  }
+}
+
+.header__wrapper {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  z-index: 3;
+  padding-left: 60px;
+}
+
+.header__logo {
+  padding: 36px 11px 32px;
+  max-width: 267px;
+  background-color: vars.$color-darkBlue;
+}

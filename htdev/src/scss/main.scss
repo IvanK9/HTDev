@@ -1,1 +1,10 @@
+// Base
+
+@use "./base/reset";
 @use "./base/base";
+@use "./base/vars";
+
+// Blocks
+
+@use "./block/header";
+@use "./block/hero";
