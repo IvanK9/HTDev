@@ -1,0 +1,171 @@
+@use "../base/vars";
+
+.duffbeer__wrapper {
+  position: relative;
+  padding: 0 60px 120px;
+  background-color: vars.$color-videoBg;
+
+  @include vars.mobile {
+    padding: 0 20px 77px;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 50px;
+  }
+}
+
+.duffbeer__title {
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: vars.$color-bannerBg;
+}
+
+.duffbeer__subtitle {
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 30px;
+  color: vars.$color-aboutText;
+}
+
+.duffbeer__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vars.mobile {
+    flex-wrap: nowrap;
+  }
+}
+
+.duffbeer__item {
+  width: 50%;
+  min-height: 294px;
+
+  img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 0;
+  }
+}
+
+.duffbeer__item-title {
+  padding: 16px 40px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  color: vars.$color-white;
+  background-color: vars.$color-deffbeerTitleBg;
+}
+
+.duffbeer__item--small {
+  width: 294px;
+
+  img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .duffbeer__item-title {
+    text-align: left;
+    background-color: vars.$color-deffbeerTitleBgSecond;
+  }
+}
+
+.duffbeer__item:nth-child(3) {
+  margin-left: auto;
+  background-color: vars.$color-deffbeerTitleBgSecond;
+
+  img {
+    display: block;
+    width: 162px;
+    height: 73px;
+    object-fit: cover;
+    margin: 72px auto 32px auto;
+  }
+
+  .duffbeer__item-title {
+    padding-top: 0;
+    padding-bottom: 73px;
+    text-align: center;
+  }
+}
+
+.duffbeer__item:nth-child(4) {
+  .duffbeer__item-title {
+    text-align: left;
+  }
+}
+
+.duffbeer__item:last-child {
+  background-color: vars.$color-deffbeerTitleBgSecond;
+
+  img {
+    display: block;
+    width: 59px;
+    height: 77px;
+    object-fit: cover;
+    margin: 70.5px auto 32px auto;
+  }
+
+  .duffbeer__item-title {
+    padding-top: 0;
+    padding-bottom: 70.5px;
+    text-align: center;
+  }
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+
+.duffbeer__btn {
+  visibility: hidden;
+  width: 10px;
+  height: 7px;
+  top: 50%;
+  margin-top: 0;
+
+  @include vars.mobile {
+    visibility: visible;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+
+.duffbeer__btn {
+  visibility: hidden;
+  width: 10px;
+  height: 7px;
+  top: 55%;
+  margin-top: 0;
+
+  @include vars.mobile {
+    visibility: visible;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}

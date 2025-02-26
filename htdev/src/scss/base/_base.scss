@@ -7,10 +7,17 @@
   font-style: normal;
   font-weight: 400;
   // background-color: vars.$color-white;
+  @include vars.laptop {
+    max-width: 960px;
+  }
 }
 
 .container {
   max-width: 1280px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include vars.laptop {
+    max-width: 960px;
+  }
 }

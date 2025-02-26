@@ -8,6 +8,13 @@
   @include vars.mobile {
     padding: 60px 20px;
   }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 30px;
+  }
 }
 
 .advantages__title {
@@ -118,8 +125,4 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: none;
-}
-
-.advantages__pagination {
-  bottom: 30px;
 }
