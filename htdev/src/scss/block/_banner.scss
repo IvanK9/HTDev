@@ -9,6 +9,33 @@
   background-image: url("../assets/image/banner-bg-optimized.svg");
   background-repeat: no-repeat;
   background-position: right bottom;
+
+  @include vars.laptop {
+    padding: 94px 40px;
+    background-position: right -280px bottom;
+  }
+
+  @include vars.tablet {
+    column-gap: 27px;
+    padding: 32px 20px;
+    background-image: url("../assets/image/banner-bg-S.svg");
+    background-position: right top 7px;
+    // background-position: right 10px top 10px;
+    // background-size: 179px 132px;
+
+    .banner__img {
+      width: 23px;
+      height: 28px;
+    }
+  }
+
+  @include vars.mobile {
+    padding: 32px 15px;
+    column-gap: 7px;
+    align-items: start;
+    background-position: right -60px bottom -50px;
+    background-size: 179px 132px;
+  }
 }
 
 .banner__descr {
@@ -18,4 +45,14 @@
   font-size: 24px;
   line-height: 32px;
   color: vars.$color-white;
+
+  @include vars.tablet {
+    max-width: 451px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include vars.mobile {
+    max-width: 85%;
+  }
 }

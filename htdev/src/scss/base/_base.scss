@@ -10,6 +10,14 @@
   @include vars.laptop {
     max-width: 960px;
   }
+
+  @include vars.tablet {
+    max-width: 640px;
+  }
+
+  @include vars.mobile {
+    max-width: 610px;
+  }
 }
 
 .container {
@@ -19,5 +27,13 @@
 
   @include vars.laptop {
     max-width: 960px;
+  }
+
+  @include vars.tablet {
+    max-width: 640px;
+  }
+
+  @include vars.mobile {
+    max-width: 610px;
   }
 }

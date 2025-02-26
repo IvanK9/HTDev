@@ -1,14 +1,13 @@
-const mediaQueryS = window.matchMedia("(max-width: 700px)");
+const mediaQueryS = window.matchMedia("(max-width: 1019px)");
 
 // import Swiper from "swiper";
 import Swiper from 'swiper/bundle';
 import "swiper/css/bundle";
 
 function getAdvantagesSwiper() {
-  new Swiper(".advantages__box", {
-    // direction: "horizontal",
-    // loop: true,
+  const advantagesSlider = new Swiper(".advantages__box", {
     slidesPerView: 2,
+    width: 545,
     spaceBetween: 25,
 
     pagination: {
@@ -17,29 +16,30 @@ function getAdvantagesSwiper() {
     },
 
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".advantages__btn--next",
+      prevEl: ".advantages__btn--prev",
     },
 
-    // breakpoints: {
-    //   0: {
-    //     spaceBetween: 25,
-    //   },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        width: null,
+        spaceBetween: 25,
+      },
 
-    //   700: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 0,
-    //   },
-    // },
+      700: {
+        slidesPerView: 2,
+        width: 545,
+        spaceBetween: 25,
+      },
+    },
   });
 }
 
 function getDuffbeersSwiper() {
-  console.log("Ok");
-  new Swiper(".duffbeer__box", {
-    // direction: "horizontal",
-    // loop: true,
+  const duffbeerSlider =  new Swiper(".duffbeer__box", {
     slidesPerView: 2,
+    width: 545,
     spaceBetween: 25,
 
     pagination: {
@@ -52,16 +52,19 @@ function getDuffbeersSwiper() {
       prevEl: ".duffbeer__btn--prev",
     },
 
-    // breakpoints: {
-    //   0: {
-    //     spaceBetween: 25,
-    //   },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        width: null,
+        spaceBetween: 25,
+      },
 
-    //   700: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 0,
-    //   },
-    // },
+      700: {
+        slidesPerView: 2,
+        width: 545,
+        spaceBetween: 25,
+      },
+    },
   });
 }
 

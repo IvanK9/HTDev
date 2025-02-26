@@ -6,6 +6,23 @@
   text-align: center;
   background-image: url("../assets/image/mission-bg.webp");
   z-index: 0;
+
+  @include vars.laptop {
+    padding: 84px 144px 101px;
+    background-image: url("../assets/image/mission-bg-M.webp");
+  }
+
+  @include vars.tablet {
+    padding: 55px 91px;
+    background-size: cover;
+    background-position: center bottom -14px;
+  }
+
+  @include vars.mobile {
+    padding: 27px 15px 60px;
+    background-position: center bottom;
+    background-image: url("../assets/image/mission-bg-XS.webp");
+  }
 }
 
 .mission__wrapper::after {
@@ -35,6 +52,22 @@
   line-height: 80px;
   text-transform: uppercase;
   color: vars.$color-white;
+
+  @include vars.laptop {
+    margin-bottom: 32px;
+  }
+
+  @include vars.tablet {
+    column-gap: 12px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 46px;
+  }
+
+  @include vars.mobile {
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
 }
 
 .mission__title::before,
@@ -44,6 +77,11 @@
   width: 66px;
   height: 3px;
   background-color: vars.$color-white;
+
+  @include vars.tablet {
+    width: 15px;
+    height: 1px;
+  }
 }
 
 .mission__subtitle {
@@ -51,7 +89,28 @@
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  text-align: center;
   color: vars.$color-white;
+
+  @include vars.laptop {
+    margin: 0 auto;
+    margin-bottom: 32px;
+    line-height: 32px;
+    max-width: 582px;
+    text-align: center;
+  }
+
+  @include vars.tablet {
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 399px;
+  }
+
+  @include vars.mobile {
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
 }
 
 .mission__btn {
@@ -62,6 +121,16 @@
   color: vars.$color-bannerBg;
   background-color: vars.$color-white;
   transition: opacity 0.3s ease-in-out;
+
+  @include vars.tablet {
+    padding: 10px 32px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  @include vars.mobile {
+    font-size: 18px;
+  }
 }
 
 .mission__btn:hover {
