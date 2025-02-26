@@ -1,0 +1,39 @@
+@use "./vars";
+
+.layout {
+  max-width: 1350px;
+  margin: 15px auto;
+  font-family: Arial, 'Courier New', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  // background-color: vars.$color-white;
+  @include vars.laptop {
+    max-width: 960px;
+  }
+
+  @include vars.tablet {
+    max-width: 640px;
+  }
+
+  @include vars.mobile {
+    max-width: 610px;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include vars.laptop {
+    max-width: 960px;
+  }
+
+  @include vars.tablet {
+    max-width: 640px;
+  }
+
+  @include vars.mobile {
+    max-width: 610px;
+  }
+}
